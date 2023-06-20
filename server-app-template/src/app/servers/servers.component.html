@@ -1,0 +1,19 @@
+<input [(ngModel)]="serverName" type="text"/>
+<br/>
+<span class="form-label">your input: {{ serverName }}</span>
+<br/>
+
+<input (input)="onInputChange($event)" type="text"/>
+<br/>
+<span class="form-label">your input: {{ serverNameManual }}</span>
+<br/>
+
+<button class="btn btn-primary" [disabled]="!allowAddServer" (click)="onAddServer()">Add Server</button>
+
+<p>Allow to add server: {{ allowAddServer }}</p>
+<!-- <p [innerText]="allowAddServer"></p> -->
+<p>{{ serverCreationStatus }}</p>
+
+<app-server></app-server>
+<app-server></app-server>
+<!-- <p>test</p> -->
