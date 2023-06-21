@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ServersComponent } from './servers/servers.component';
 import { UsersComponent } from './users/users.component';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeModule } from './home/home.module';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,13 +17,13 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     ServersComponent,
     UsersComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes) // mendaftarkan routes
+    RouterModule.forRoot(appRoutes), // mendaftarkan routes,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
