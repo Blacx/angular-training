@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p appTurnBold>Here are some links to help you get started:</p>
+      <p appTurnBoldNew>Here are some links to help you get started:</p>
+      <p appTurnHighlight hightLightColor="orange" defaultColor="yellow">Here are some links to help you get started:</p>
+
+      <div *ngIf="showElement">This is controller element!</div>
+      <ng-template [ngIf]="!showElement">
+        This is controller element from ng-template!
+      </ng-template>
+
+      <ul class="list-group">
+        <li *ngFor="let item of items" class="list-group-item">{{ item  }}</li>
+      </ul>
+
+      <div [ngSwitch]="condition">
+        <p *ngSwitchCase="'high'">High</p>
+        <p *ngSwitchCase="'medium'">Medium</p>
+        <p *ngSwitchDefault>Low</p>
+      </div>
+
+      <div [ngClass]="{'alert alert-danger': isDanger}">Alert: Low disk space!</div>
+
+      <div [ngStyle]="{'color': color}">This text is green</div>
+
+      <p *appCustomIf="!showElement">This is our own ngIf clone directive</p>
+      <ng-template [appCustomIf]="!showElement">
+        This is our own ngIf clone directive using ng-template
+      </ng-template>
+
+    </div>
+  </div>
+</div>
