@@ -1,0 +1,10 @@
+<h1>Users</h1>
+<ul class="list-group">
+  <li *ngFor="let user of users" class="list-group-item">
+    <div class="d-flex justify-content-between">
+      <div>{{ user.name }}</div>
+      <div>{{ user.email }}</div>
+    </div>
+    <div class="text-muted">{{ user.phone }}</div>
+  </li>
+</ul>

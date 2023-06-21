@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { ServersService } from './servers.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,17 +8,19 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
+  public servers: {id: number, name: string, status: string}[] = [];
 
-  constructor(
-    private routes: Router,
-    private route: ActivatedRoute, 
-    private title: Title){}
-
-    ngOnInit(): void {
-      this.title.setTitle('Servers');
-    }
-  
-  onLoadServer() {
-    this.routes.navigate(['/servers'], {relativeTo: this.route});
+  constructor(private serversService: ServersService,
+              private router: Router,
+              private route: ActivatedRoute) {
   }
+
+  ngOnInit() {
+    this.servers = this.serversService.getServers();
+  }
+
+  onReload() {
+    // this.router.navigate(['servers'], {relativeTo: this.route});
+  }
+
 }

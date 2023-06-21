@@ -1,0 +1,14 @@
+{
+    "Sitetitle": "Commentaires des clients",
+    "Name": "Nom",
+    "NameError": "Le nom ne peut pas être vide !",
+    "Email": "Adresses Mail",
+    "PhoneNo": "Pas de téléphone",
+    "NPWP": "Numéro d'Identification Fiscale (NIF)",
+    "Comment": "Vos commentaires",
+    "TermsConditions": "J'accepte les termes et conditions.",
+    "Submit": "Envoyer",
+    "Back": "Retour",
+    "AddFeedback": "Ajouter un commentaire",
+    "Thanks": "Merci pour votre avis!"
+}

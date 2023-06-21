@@ -1,0 +1,16 @@
+.required {
+    color: red;
+}
+
+.bg-primary {
+    background-color: #02275d !important;
+}
+
+.btn-djp {
+    background-color: #ffb822;
+    border: none;
+}
+
+.form-group > label {
+    font-size: 0.8em;
+}

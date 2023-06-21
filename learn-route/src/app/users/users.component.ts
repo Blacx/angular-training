@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-users',
@@ -7,10 +6,18 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent {
-
-  constructor(private title: Title){}
-  
-  ngOnInit(): void {
-    this.title.setTitle('users');
-  }
+  users = [
+    {
+      id: 1,
+      name: 'Max'
+    },
+    {
+      id: 2,
+      name: 'Anna'
+    },
+    {
+      id: 3,
+      name: 'Chris'
+    }
+  ];
 }

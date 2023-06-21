@@ -1,0 +1,14 @@
+{
+    "Sitetitle": "Customer Feedback",
+    "Name": "Name",
+    "NameError": "Name cannot be empty!",
+    "Email": "Email address",
+    "PhoneNo": "Phone No",
+    "NPWP": "Taxpayer Identification Number (TIN)",
+    "Comment": "Your Comment",
+    "TermsConditions": "I agree to terms and conditions.",
+    "Submit": "Submit",
+    "Back": "Back",
+    "AddFeedback": "Add Feedback",
+    "Thanks": "Thank you for your feedback!"
+}

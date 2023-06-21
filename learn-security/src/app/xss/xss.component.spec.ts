@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ServersComponent } from './servers.component';
+import { XssComponent } from './xss.component';
 
-describe('ServersComponent', () => {
-  let component: ServersComponent;
-  let fixture: ComponentFixture<ServersComponent>;
+describe('XssComponent', () => {
+  let component: XssComponent;
+  let fixture: ComponentFixture<XssComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ServersComponent]
+      declarations: [XssComponent]
     });
-    fixture = TestBed.createComponent(ServersComponent);
+    fixture = TestBed.createComponent(XssComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

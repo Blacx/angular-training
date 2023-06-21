@@ -1,0 +1,14 @@
+{
+    "Sitetitle": "Masukan Pelanggan",
+    "Name": "Nama",
+    "NameError": "Masukan nama!",
+    "Email": "Alamat Email",
+    "PhoneNo": "Nomor Telepon",
+    "NPWP": "Nomor Pokok Wajib Pajak (NPWP)",
+    "Comment": "Komentar Anda",
+    "TermsConditions": "Saya menyetujui syarat dan ketentuan.",
+    "Submit": "Kirim",
+    "Back": "Kembali",
+    "AddFeedback": "Tambah Masukan",
+    "Thanks": "Terima kasih atas masukan anda!"
+}
