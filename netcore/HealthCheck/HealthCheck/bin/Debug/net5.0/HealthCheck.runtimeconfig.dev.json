@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\SUCI025\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\SUCI025\\.nuget\\packages",
+      "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
+    ]
+  }
+}
