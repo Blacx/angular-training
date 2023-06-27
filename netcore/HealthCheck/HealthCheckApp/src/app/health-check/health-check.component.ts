@@ -1,6 +1,6 @@
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, Subscription, catchError, retry, tap, throwError } from 'rxjs';
+import { Observable, Subscription, throwError } from 'rxjs';
 
 @Component({
   selector: 'app-health-check',
@@ -9,7 +9,7 @@ import { Observable, Subscription, catchError, retry, tap, throwError } from 'rx
 })
 export class HealthCheckComponent implements OnInit, OnDestroy {
   
-  serviceEndPoint: string = 'https://localhost:5001/status';
+  serviceEndPoint: string = 'http://localhost:5000/status';
   public result: Result;
   getSubscription: Subscription;
 
@@ -18,7 +18,7 @@ export class HealthCheckComponent implements OnInit, OnDestroy {
   ) { }
  
   ngOnInit(): void {
-    this.getSubscription = this.httpClient.get<Result>(this.serviceEndPoint).pipe(retry(1)).subscribe({
+    this.getSubscription = this.httpClient.get<Result>(this.serviceEndPoint).subscribe({
       next: (result) => {
         this.result = result;
         console.log(result);

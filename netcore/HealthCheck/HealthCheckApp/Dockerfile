@@ -1,11 +1,10 @@
-FROM node:10
+FROM node:14-alpine AS build
+WORKDIR /usr/src/app
+COPY package.json package-lock.json ./
+RUN npm install
+COPY . .
+RUN npm run localdocker
 
-WORKDIR /usr/src/app/app-ui
-
-COPY package*.json ./
-
-RUN npm install -g @angular/cli @angular-devkit/build-angular && npm install
-
-EXPOSE 4201
-
-CMD ["npm", "start"]
+FROM nginx:alpine
+COPY ./config/nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /usr/src/app/dist/AngularApp /usr/share/nginx/html

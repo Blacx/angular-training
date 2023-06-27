@@ -33,22 +33,13 @@ namespace HealthCheck
                 .AddCheck("ICMP2", new ICMPHealthCheck("www.brainmatics.com", 300))
                 .AddCheck("ICMP3", new ICMPHealthCheck("www.notexistsdomain.com", 300));
             services.AddControllers();
-            //services.AddCors(options =>
-            //{
-            //    options.AddDefaultPolicy(builder => {
-            //        builder
-            //        .AllowAnyOrigin()
-            //        .AllowAnyHeader()
-            //        .AllowAnyMethod();
-            //    });
-            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseCors(
-                options => options.WithOrigins("http://localhost:4200").AllowAnyMethod()
+                options => options.WithOrigins(Configuration["ClientEndpoint"]).AllowAnyMethod()
             );
 
             if (env.IsDevelopment())
@@ -57,7 +48,7 @@ namespace HealthCheck
             }
 
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
